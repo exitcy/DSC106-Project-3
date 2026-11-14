@@ -119,7 +119,7 @@
     host.innerHTML = "";
     const width = host.clientWidth || 900;
     const height = Math.max(420, Math.min(520, width * 0.52));
-    const margin = { top: 28, right: 28, bottom: 48, left: 58 };
+    const margin = { top: 16, right: 24, bottom: 48, left: 58 };
     const innerW = width - margin.left - margin.right;
     const innerH = height - margin.top - margin.bottom;
 
@@ -199,9 +199,10 @@
         .attr("d", line);
     });
 
-    // Divergence annotation
+    // Divergence annotation — place mid-plot, left of the marker to avoid clutter
     const div = state.summary?.divergence;
     if (div) {
+      const labelY = Math.max(28, y(2.2));
       g.append("line")
         .attr("x1", x(div.year))
         .attr("x2", x(div.year))
@@ -211,8 +212,11 @@
         .attr("stroke-dasharray", "3 4");
       g.append("text")
         .attr("class", "annotation-label")
-        .attr("x", x(div.year) + 6)
-        .attr("y", 14)
+        .attr("x", x(div.year) - 8)
+        .attr("y", labelY)
+        .attr("text-anchor", "end")
+        .attr("font-size", 12)
+        .attr("fill", "#3d4f5a")
         .text(`Divergence ≥ ${div.threshold_c} °C (${div.year})`);
     }
 
@@ -236,40 +240,6 @@
       .attr("cy", (d) => y(d.value))
       .attr("r", 6)
       .attr("fill", (d) => COLORS[d.scenario]);
-
-    // Legend
-    const legend = g.append("g").attr("class", "legend").attr("transform", `translate(${innerW - 150}, 8)`);
-    seriesOrder.forEach((scenario, i) => {
-      const row = legend.append("g").attr("transform", `translate(0, ${i * 18})`);
-      row.append("line")
-        .attr("x1", 0)
-        .attr("x2", 18)
-        .attr("y1", 0)
-        .attr("y2", 0)
-        .attr("stroke", COLORS[scenario])
-        .attr("stroke-width", 3);
-      row.append("text").attr("x", 24).attr("y", 4).text(scenario);
-    });
-
-    // Diverging color strip for anomaly meaning
-    const defs = svg.append("defs");
-    const grad = defs
-      .append("linearGradient")
-      .attr("id", "anomaly-diverging")
-      .attr("x1", "0%")
-      .attr("x2", "100%");
-    grad.append("stop").attr("offset", "0%").attr("stop-color", "#2c7bb6");
-    grad.append("stop").attr("offset", "50%").attr("stop-color", "#f7f1e8");
-    grad.append("stop").attr("offset", "100%").attr("stop-color", "#d7191c");
-    const legendY = g.append("g").attr("transform", `translate(0, -18)`);
-    legendY
-      .append("rect")
-      .attr("width", 120)
-      .attr("height", 8)
-      .attr("rx", 4)
-      .attr("fill", "url(#anomaly-diverging)");
-    legendY.append("text").attr("x", 0).attr("y", -4).attr("font-size", 11).attr("fill", "#4d5d68").text("Cooler than baseline");
-    legendY.append("text").attr("x", 120).attr("y", -4).attr("text-anchor", "end").attr("font-size", 11).attr("fill", "#4d5d68").text("Warmer");
 
     // Hover overlay
     const bisect = d3.bisector((d) => d.year).center;
