@@ -174,13 +174,6 @@
       .attr("y1", y(0))
       .attr("y2", y(0));
 
-    g.append("text")
-      .attr("x", 4)
-      .attr("y", y(0) - 6)
-      .attr("fill", "#5b6b75")
-      .attr("font-size", 11)
-      .text("1995–2014 baseline (0 °C)");
-
     const grouped = byScenario(state.data);
     const line = d3
       .line()
@@ -199,26 +192,32 @@
         .attr("d", line);
     });
 
-    // Divergence annotation — place mid-plot, left of the marker to avoid clutter
+    // Divergence marker only — label lives in the caption below to avoid chart clutter
     const div = state.summary?.divergence;
     if (div) {
-      const labelY = Math.max(28, y(2.2));
       g.append("line")
         .attr("x1", x(div.year))
         .attr("x2", x(div.year))
         .attr("y1", 0)
         .attr("y2", innerH)
-        .attr("stroke", "rgba(20,33,43,0.2)")
+        .attr("stroke", "rgba(20,33,43,0.25)")
         .attr("stroke-dasharray", "3 4");
       g.append("text")
-        .attr("class", "annotation-label")
-        .attr("x", x(div.year) - 8)
-        .attr("y", labelY)
-        .attr("text-anchor", "end")
-        .attr("font-size", 12)
+        .attr("x", x(div.year))
+        .attr("y", innerH - 8)
+        .attr("text-anchor", "middle")
+        .attr("font-size", 11)
         .attr("fill", "#3d4f5a")
-        .text(`Divergence ≥ ${div.threshold_c} °C (${div.year})`);
+        .text(String(div.year));
     }
+
+    g.append("text")
+      .attr("x", innerW - 4)
+      .attr("y", y(0) - 6)
+      .attr("text-anchor", "end")
+      .attr("fill", "#5b6b75")
+      .attr("font-size", 11)
+      .text("0 °C baseline");
 
     // Playhead + comparison markers
     g.append("line")
