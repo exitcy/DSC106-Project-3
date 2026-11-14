@@ -6,6 +6,10 @@
     "SSP5-8.5": "#d7191c",
   };
   const FUTURE = ["SSP1-2.6", "SSP2-4.5", "SSP5-8.5"];
+  const PLAYBACK_START_YEAR = 2015;
+  const PLAYBACK_DURATION_MS = 10000;
+  const STATUS_WINDOW_YEARS = 10;
+  const WINDOW_YEARS = 20;
 
   const state = {
     year: 2100,
@@ -29,8 +33,22 @@
     compareB: document.getElementById("compare-b"),
     compareReadout: document.getElementById("compare-readout"),
     annotation: document.getElementById("annotation-caption"),
+    photoFinish: document.getElementById("photo-finish"),
+    playButton: document.getElementById("play-button"),
+    windowChartTitle: document.getElementById("window-chart-title"),
+    thresholdBadge: document.getElementById("threshold-badge"),
+    thresholdLabel: document.getElementById("threshold-label"),
+    thresholdValue: document.getElementById("threshold-value"),
+    floeSvg: document.getElementById("ice-floe-svg"),
+    floeGroup: document.getElementById("floe-group"),
+    polarBear: document.getElementById("polar-bear"),
+    floeLive: document.getElementById("floe-live"),
     buttons: Array.from(document.querySelectorAll(".scenario-btn")),
   };
+
+  let playbackTimer = null;
+  let playbackHasStarted = false;
+  let playbackFinished = false;
 
   function byScenario(rows) {
     return d3.group(rows, (d) => d.scenario);
@@ -39,6 +57,107 @@
   function valueAt(scenario, year) {
     const row = state.data.find((d) => d.scenario === scenario && d.year === year);
     return row ? row.anomaly_c : null;
+  }
+
+  function scenarioForSelectedYear() {
+    if (state.year < PLAYBACK_START_YEAR) return "Historical";
+    return state.focus === "all" ? "SSP2-4.5" : state.focus;
+  }
+
+  function centeredWindow(rows, year, windowYears) {
+    const availableMin = d3.min(rows, (d) => d.year);
+    const availableMax = d3.max(rows, (d) => d.year);
+    let start = year - Math.floor(windowYears / 2);
+    let end = start + windowYears - 1;
+    if (start < availableMin) {
+      start = availableMin;
+      end = Math.min(availableMax, start + windowYears - 1);
+    }
+    if (end > availableMax) {
+      end = availableMax;
+      start = Math.max(availableMin, end - windowYears + 1);
+    }
+    return { start, end };
+  }
+
+  function rollingMeanAt(scenario, year, windowYears) {
+    const rows = state.data.filter((d) => d.scenario === scenario);
+    const window = centeredWindow(rows, year, windowYears);
+    const value = d3.mean(
+      rows.filter((d) => d.year >= window.start && d.year <= window.end),
+      (d) => d.anomaly_c
+    );
+    return { ...window, value };
+  }
+
+  function signedTemperature(value) {
+    const sign = value > 0 ? "+" : "";
+    return `${sign}${value.toFixed(2)} °C`;
+  }
+
+  function updateIceFloe() {
+    const scenario = scenarioForSelectedYear();
+    const anomaly = valueAt(scenario, state.year);
+    if (anomaly == null) return;
+
+    const maxAnomaly = d3.max(state.data, (d) => d.anomaly_c) || 1;
+    const floeScale = d3
+      .scaleLinear()
+      .domain([0, maxAnomaly])
+      .range([1, 0.15])
+      .clamp(true)(anomaly);
+    const showAllNote = state.focus === "all" && state.year >= PLAYBACK_START_YEAR
+      ? " (used for Show all)"
+      : "";
+    const bearCompensation = Math.max(1, 0.2 / floeScale);
+    const bearWidth = 96 * bearCompensation;
+    const bearHeight = 64 * bearCompensation;
+
+    d3.select(els.floeGroup)
+      .interrupt()
+      .transition()
+      .duration(200)
+      .attr("transform", `translate(110, 102) scale(${floeScale}) rotate(-2)`);
+    d3.select(els.polarBear)
+      .interrupt()
+      .transition()
+      .duration(200)
+      .attr("x", -bearWidth / 2)
+      .attr("y", -2 - bearHeight)
+      .attr("width", bearWidth)
+      .attr("height", bearHeight);
+
+    els.floeLive.textContent =
+      `${scenario}${showAllNote}, ${state.year}: ${signedTemperature(anomaly)}`;
+    els.floeSvg.setAttribute(
+      "aria-label",
+      `Illustrative ice floe for ${scenario} in ${state.year}: ` +
+        `${signedTemperature(anomaly)}, floe shown at ${Math.round(floeScale * 100)} percent size.`
+    );
+  }
+
+  function updateThresholdBadge() {
+    const scenario = scenarioForSelectedYear();
+    const rolling = rollingMeanAt(scenario, state.year, STATUS_WINDOW_YEARS);
+    let statusClass;
+    let label;
+
+    if (rolling.value < 1.5) {
+      statusClass = "status-green";
+      label = "Within Paris 1.5 °C target";
+    } else if (rolling.value <= 2) {
+      statusClass = "status-amber";
+      label = "Above 1.5 °C";
+    } else {
+      statusClass = "status-red";
+      label = "Above 2 °C";
+    }
+
+    els.thresholdBadge.classList.remove("status-green", "status-amber", "status-red");
+    els.thresholdBadge.classList.add(statusClass);
+    els.thresholdLabel.textContent = label;
+    els.thresholdValue.textContent =
+      `${scenario} · ${rolling.start}–${rolling.end} mean: ${signedTemperature(rolling.value)}`;
   }
 
   function clampTooltip(x, y, width, height) {
@@ -105,13 +224,86 @@
           `(gap ${s.divergence.gap_c.toFixed(2)} °C in the CanESM5 series).`
       );
     }
-    if (s.gap_2100_high_minus_low_c != null) {
-      parts.push(
-        `By 2100, SSP5-8.5 is ${s.gap_2100_high_minus_low_c.toFixed(2)} °C warmer than SSP1-2.6 ` +
-          `in this CanESM5 run (${s.year_2100_c["SSP5-8.5"]} °C vs ${s.year_2100_c["SSP1-2.6"]} °C).`
-      );
-    }
     els.annotation.textContent = parts.join(" ");
+  }
+
+  function setPlaybackButton(mode) {
+    const labels = {
+      play: { text: "▶ Play", aria: "Play temperature projections" },
+      pause: { text: "⏸ Pause", aria: "Pause temperature projections" },
+      replay: { text: "↻ Replay", aria: "Replay temperature projections from 2015" },
+    };
+    const label = labels[mode];
+    els.playButton.textContent = label.text;
+    els.playButton.setAttribute("aria-label", label.aria);
+  }
+
+  function hidePhotoFinish() {
+    els.photoFinish.hidden = true;
+    els.photoFinish.textContent = "";
+  }
+
+  function showPhotoFinish() {
+    const endYear = Number(els.slider.max);
+    const high = valueAt("SSP5-8.5", endYear);
+    const low = valueAt("SSP1-2.6", endYear);
+    if (high == null || low == null) return;
+    const difference = high - low;
+    const sign = difference >= 0 ? "+" : "";
+    els.photoFinish.textContent =
+      `By ${endYear}, SSP5-8.5 is ${sign}${difference.toFixed(2)} °C above SSP1-2.6.`;
+    els.photoFinish.hidden = false;
+  }
+
+  function stopPlayback(buttonMode = "play") {
+    if (playbackTimer) {
+      playbackTimer.stop();
+      playbackTimer = null;
+    }
+    setPlaybackButton(buttonMode);
+  }
+
+  function pausePlayback() {
+    stopPlayback("play");
+  }
+
+  function finishPlayback() {
+    stopPlayback("replay");
+    playbackFinished = true;
+    showPhotoFinish();
+  }
+
+  function startPlayback() {
+    stopPlayback("play");
+    hidePhotoFinish();
+
+    const startYear = PLAYBACK_START_YEAR;
+    const endYear = Number(els.slider.max);
+    if (
+      !playbackHasStarted ||
+      playbackFinished ||
+      state.year < startYear ||
+      state.year >= endYear
+    ) {
+      setYear(startYear);
+    }
+
+    playbackHasStarted = true;
+    playbackFinished = false;
+    setPlaybackButton("pause");
+
+    const stepDuration = PLAYBACK_DURATION_MS / Math.max(1, endYear - startYear);
+    playbackTimer = d3.interval(() => {
+      const nextYear = Math.min(endYear, state.year + 1);
+      setYear(nextYear);
+      if (nextYear >= endYear) finishPlayback();
+    }, stepDuration);
+  }
+
+  function stopForManualYearChange() {
+    pausePlayback();
+    playbackFinished = false;
+    hidePhotoFinish();
   }
 
   function drawMainChart() {
@@ -242,6 +434,7 @@
 
     // Hover overlay
     const bisect = d3.bisector((d) => d.year).center;
+    const historicalRows = (grouped.get("Historical") || []).slice().sort((a, b) => a.year - b.year);
     const futureRows = FUTURE.map((scenario) => ({
       scenario,
       rows: (grouped.get(scenario) || []).slice().sort((a, b) => a.year - b.year),
@@ -258,15 +451,21 @@
       .on("mousemove", (event) => {
         const [mx] = d3.pointer(event);
         const year = Math.round(x.invert(mx));
-        const clamped = Math.max(2015, Math.min(2100, year));
-        const lines = futureRows
-          .map(({ scenario, rows }) => {
-            if (!rows.length) return null;
-            const i = bisect(rows, clamped);
-            const row = rows[Math.max(0, Math.min(rows.length - 1, i))];
-            return `${scenario}: ${row.anomaly_c.toFixed(2)} °C`;
-          })
-          .filter(Boolean);
+        const clamped = Math.max(Number(els.slider.min), Math.min(Number(els.slider.max), year));
+        const lines = clamped < PLAYBACK_START_YEAR
+          ? (() => {
+              const i = bisect(historicalRows, clamped);
+              const row = historicalRows[Math.max(0, Math.min(historicalRows.length - 1, i))];
+              return [`Historical: ${row.anomaly_c.toFixed(2)} °C`];
+            })()
+          : futureRows
+              .map(({ scenario, rows }) => {
+                if (!rows.length) return null;
+                const i = bisect(rows, clamped);
+                const row = rows[Math.max(0, Math.min(rows.length - 1, i))];
+                return `${scenario}: ${row.anomaly_c.toFixed(2)} °C`;
+              })
+              .filter(Boolean);
         showTooltip(
           event,
           `<strong>${clamped}</strong>${lines.join("<br>")}`
@@ -276,58 +475,115 @@
       .on("click", (event) => {
         const [mx] = d3.pointer(event);
         const year = Math.round(x.invert(mx));
-        const clamped = Math.max(2015, Math.min(2100, year));
-        els.slider.value = String(clamped);
+        const clamped = Math.max(Number(els.slider.min), Math.min(Number(els.slider.max), year));
+        stopForManualYearChange();
         setYear(clamped);
       });
   }
 
   function drawEndCentury() {
     const host = els.endChart;
-    host.innerHTML = "";
-    const means = state.summary?.end_century_means_c || {};
-    const rows = FUTURE.map((scenario) => ({ scenario, value: means[scenario] })).filter((d) => d.value != null);
+    const futureData = state.data.filter((d) => FUTURE.includes(d.scenario));
+    const { start: startYear, end: endYear } = centeredWindow(
+      futureData,
+      state.year,
+      WINDOW_YEARS
+    );
+
+    const rows = FUTURE.map((scenario) => ({
+      scenario,
+      value: d3.mean(
+        futureData.filter(
+          (d) => d.scenario === scenario && d.year >= startYear && d.year <= endYear
+        ),
+        (d) => d.anomaly_c
+      ),
+    })).filter((d) => d.value != null);
+
+    els.windowChartTitle.textContent = `20-year mean warming (${startYear}–${endYear})`;
     const width = host.clientWidth || 480;
     const height = 220;
     const margin = { top: 16, right: 16, bottom: 36, left: 48 };
     const innerW = width - margin.left - margin.right;
     const innerH = height - margin.top - margin.bottom;
-    const svg = d3.select(host).append("svg").attr("viewBox", `0 0 ${width} ${height}`);
-    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    const svg = d3
+      .select(host)
+      .selectAll("svg")
+      .data([null])
+      .join("svg")
+      .attr("viewBox", `0 0 ${width} ${height}`);
+    const g = svg
+      .selectAll("g.window-chart-root")
+      .data([null])
+      .join("g")
+      .attr("class", "window-chart-root")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
     const x = d3.scaleBand().domain(FUTURE).range([0, innerW]).padding(0.28);
+    const maxFutureValue = d3.max(futureData, (d) => d.anomaly_c) || d3.max(rows, (d) => d.value) || 1;
     const y = d3
       .scaleLinear()
-      .domain([0, d3.max(rows, (d) => d.value) * 1.15])
+      .domain([0, maxFutureValue * 1.08])
       .nice()
       .range([innerH, 0]);
 
-    g.append("g").attr("class", "axis").attr("transform", `translate(0,${innerH})`).call(d3.axisBottom(x));
-    g.append("g").attr("class", "axis").call(d3.axisLeft(y).ticks(4));
+    g.selectAll("g.window-x-axis")
+      .data([null])
+      .join("g")
+      .attr("class", "axis window-x-axis")
+      .attr("transform", `translate(0,${innerH})`)
+      .call(d3.axisBottom(x));
+    g.selectAll("g.window-y-axis")
+      .data([null])
+      .join("g")
+      .attr("class", "axis window-y-axis")
+      .call(d3.axisLeft(y).ticks(4));
 
-    g.selectAll("rect")
-      .data(rows)
-      .join("rect")
+    const bars = g
+      .selectAll("rect.window-bar")
+      .data(rows, (d) => d.scenario)
+      .join((enter) =>
+        enter
+          .append("rect")
+          .attr("class", "window-bar")
+          .attr("x", (d) => x(d.scenario))
+          .attr("y", innerH)
+          .attr("width", x.bandwidth())
+          .attr("height", 0)
+          .attr("rx", 6)
+          .attr("fill", (d) => COLORS[d.scenario])
+      )
       .attr("x", (d) => x(d.scenario))
-      .attr("y", (d) => y(d.value))
       .attr("width", x.bandwidth())
-      .attr("height", (d) => innerH - y(d.value))
       .attr("rx", 6)
       .attr("fill", (d) => COLORS[d.scenario])
       .on("mousemove", (event, d) => {
-        showTooltip(event, `<strong>${d.scenario}</strong>2081–2100 mean<br>${d.value.toFixed(2)} °C`);
+        showTooltip(
+          event,
+          `<strong>${d.scenario}</strong>${startYear}–${endYear} mean<br>${d.value.toFixed(2)} °C`
+        );
       })
       .on("mouseleave", hideTooltip);
 
+    bars
+      .interrupt()
+      .transition()
+      .duration(160)
+      .attr("y", (d) => y(d.value))
+      .attr("height", (d) => innerH - y(d.value));
+
     g.selectAll(".bar-label")
-      .data(rows)
+      .data(rows, (d) => d.scenario)
       .join("text")
       .attr("class", "bar-label")
       .attr("x", (d) => x(d.scenario) + x.bandwidth() / 2)
-      .attr("y", (d) => y(d.value) - 6)
       .attr("text-anchor", "middle")
       .attr("font-size", 12)
       .attr("fill", "#24333d")
-      .text((d) => `${d.value.toFixed(2)} °C`);
+      .text((d) => `${d.value.toFixed(2)} °C`)
+      .interrupt()
+      .transition()
+      .duration(160)
+      .attr("y", (d) => y(d.value) - 6);
   }
 
   function drawModels() {
@@ -385,6 +641,8 @@
     updateCompareReadout();
     updateScenarioPlain();
     updateAnnotations();
+    updateIceFloe();
+    updateThresholdBadge();
     drawMainChart();
     drawEndCentury();
     drawModels();
@@ -392,6 +650,7 @@
 
   function setYear(year) {
     state.year = year;
+    els.slider.value = String(year);
     renderAll();
   }
 
@@ -405,11 +664,21 @@
 
   function wireControls() {
     els.slider.addEventListener("input", (event) => {
+      stopForManualYearChange();
       setYear(Number(event.target.value));
+    });
+
+    els.playButton.addEventListener("click", () => {
+      if (playbackTimer) {
+        pausePlayback();
+      } else {
+        startPlayback();
+      }
     });
 
     els.buttons.forEach((btn) => {
       btn.addEventListener("click", () => {
+        if (playbackTimer) pausePlayback();
         els.buttons.forEach((b) => b.classList.remove("is-active"));
         btn.classList.add("is-active");
         state.focus = btn.dataset.scenario;
@@ -429,6 +698,11 @@
     window.addEventListener("resize", () => {
       clearTimeout(window.__climateResize);
       window.__climateResize = setTimeout(renderAll, 120);
+    });
+
+    window.addEventListener("pagehide", () => {
+      if (playbackTimer) playbackTimer.stop();
+      playbackTimer = null;
     });
   }
 
@@ -451,9 +725,11 @@
     state.compareA = summary.compare_default?.[0] || "SSP1-2.6";
     state.compareB = summary.compare_default?.[1] || "SSP5-8.5";
 
-    els.slider.min = summary.slider_years?.min ?? 2015;
+    els.slider.min = d3.min(state.data, (d) => d.year) ?? 1850;
     els.slider.max = summary.slider_years?.max ?? 2100;
     els.slider.value = String(state.year);
+    els.slider.setAttribute("aria-valuemin", String(els.slider.min));
+    els.slider.setAttribute("aria-valuemax", String(els.slider.max));
 
     populateCompareSelects();
     wireControls();

@@ -9,6 +9,7 @@ data/canesm5_tas_annual.nc
 data/ne_110m_coastline.geojson
 outputs/
 *.png
+!assets/polar-bear.png
 
 # Local Python exploration scripts not required for the Pages site
 main.py

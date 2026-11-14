@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;650&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/styles.css?v=4" />
+  <link rel="stylesheet" href="./css/styles.css?v=11" />
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 <body>
@@ -29,27 +29,82 @@
             Latitude-weighted annual means relative to the 1995–2014 CanESM5 historical baseline (°C).
           </p>
         </div>
-        <div class="year-badge" aria-live="polite">
-          <span class="year-label">Selected year</span>
-          <strong id="year-display">2100</strong>
+        <div class="year-status">
+          <div class="year-badge" aria-live="polite">
+            <span class="year-label">Selected year</span>
+            <strong id="year-display">2100</strong>
+          </div>
+          <div class="threshold-badge status-red" id="threshold-badge" role="status" aria-live="polite">
+            <strong id="threshold-label">Above 2 °C</strong>
+            <span id="threshold-value">10-year mean: calculating…</span>
+            <small title="Based on 10-year rolling mean of one CanESM5 run.">
+              Based on 10-year rolling mean of one CanESM5 run.
+            </small>
+          </div>
         </div>
       </div>
+
+      <aside class="plain-language-guide" aria-labelledby="plain-language-title">
+        <div class="guide-heading">
+          <span aria-hidden="true">💡</span>
+          <div>
+            <h3 id="plain-language-title">Climate terms in plain language</h3>
+            <p>You do not need a climate-science background to explore this chart.</p>
+          </div>
+        </div>
+        <dl class="term-grid">
+          <div>
+            <dt>Temperature anomaly</dt>
+            <dd>A difference, not the actual temperature. For example, +2 °C means 2 °C warmer than the baseline average.</dd>
+          </div>
+          <div>
+            <dt>Baseline</dt>
+            <dd>The 1995–2014 average used as the chart’s “zero” reference point.</dd>
+          </div>
+          <div>
+            <dt>SSP pathway</dt>
+            <dd>A possible future based on greenhouse-gas emissions. On this page, SSP1-2.6 is low, SSP2-4.5 is medium, and SSP5-8.5 is high emissions.</dd>
+          </div>
+          <div>
+            <dt>Climate projection</dt>
+            <dd>A model-based picture of what could happen under a pathway—not an exact weather forecast.</dd>
+          </div>
+          <div>
+            <dt>Rolling mean</dt>
+            <dd>An average across nearby years that smooths short-term ups and downs and makes the longer trend easier to see.</dd>
+          </div>
+          <div>
+            <dt>CanESM5 and CMIP6</dt>
+            <dd>CanESM5 is the climate model used for the main chart. CMIP6 is the larger international project that organizes many climate-model experiments.</dd>
+          </div>
+        </dl>
+      </aside>
 
       <div class="controls">
         <div class="control-block">
           <label for="year-slider">Time slider</label>
-          <p class="hint">Drag the slider toward 2100 to see how projections change.</p>
-          <input
-            id="year-slider"
-            type="range"
-            min="2015"
-            max="2100"
-            value="2100"
-            step="1"
-            aria-valuemin="2015"
-            aria-valuemax="2100"
-            aria-valuenow="2100"
-          />
+          <p class="hint">Drag from 1850 to 2100 to see how projections change.</p>
+          <div class="slider-row">
+            <input
+              id="year-slider"
+              type="range"
+              min="1850"
+              max="2100"
+              value="2100"
+              step="1"
+              aria-valuemin="1850"
+              aria-valuemax="2100"
+              aria-valuenow="2100"
+            />
+            <button id="play-button" class="play-btn" type="button" aria-label="Play temperature projections">
+              ▶ Play
+            </button>
+          </div>
+          <p class="play-note">
+            <strong>Why does Play start at 2015?</strong> The chart shows shared historical data from
+            1850–2014. The three SSP future pathways begin in 2015, so the animation starts where
+            their projections separate.
+          </p>
         </div>
 
         <div class="control-block">
@@ -97,13 +152,85 @@
           </div>
         </div>
       </div>
-      <div id="chart" class="chart" role="img" aria-label="Line chart of global temperature anomalies by scenario"></div>
+      <div class="chart-with-ice">
+        <div id="chart" class="chart" role="img" aria-label="Line chart of global temperature anomalies by scenario"></div>
+        <figure class="ice-panel">
+          <svg
+            id="ice-floe-svg"
+            viewBox="0 0 220 160"
+            role="img"
+            aria-label="Illustrative ice floe for SSP5-8.5 in 2100"
+          >
+            <defs>
+              <linearGradient id="water-depth" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#eefaff"></stop>
+                <stop offset="58%" stop-color="#cfe8f2"></stop>
+                <stop offset="100%" stop-color="#9fc8d9"></stop>
+              </linearGradient>
+              <linearGradient id="ice-top" x1="0" y1="0" x2="0.75" y2="1">
+                <stop offset="0%" stop-color="#ffffff"></stop>
+                <stop offset="62%" stop-color="#eaf7fb"></stop>
+                <stop offset="100%" stop-color="#c8e3ed"></stop>
+              </linearGradient>
+              <linearGradient id="ice-side" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#a9d1df"></stop>
+                <stop offset="100%" stop-color="#6098ad"></stop>
+              </linearGradient>
+              <radialGradient id="water-glow" cx="50%" cy="35%" r="60%">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.72"></stop>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"></stop>
+              </radialGradient>
+              <filter id="soft-shadow" x="-30%" y="-50%" width="160%" height="220%">
+                <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+              </filter>
+            </defs>
+            <rect class="ice-water" width="220" height="160" rx="6"></rect>
+            <ellipse class="water-glow" cx="110" cy="48" rx="95" ry="52"></ellipse>
+            <path class="water-line water-line-upper" d="M0 102 C30 96, 52 108, 81 102 S133 96, 162 102 S198 108, 220 101"></path>
+            <path class="water-line" d="M0 122 C28 116, 49 128, 76 122 S126 116, 154 122 S194 128, 220 121"></path>
+            <path class="water-line water-line-lower" d="M0 139 C25 134, 50 145, 78 139 S128 133, 157 139 S195 145, 220 138"></path>
+            <g id="floe-group" transform="translate(110, 102) scale(1) rotate(-2)">
+              <ellipse class="floe-shadow" cx="0" cy="26" rx="70" ry="13"></ellipse>
+              <path
+                class="ice-floe-side"
+                transform="translate(0, 9)"
+                d="M-82,-14 C-72,-31,-45,-38,-22,-34 C-4,-45,24,-40,37,-29 C61,-31,82,-17,80,-3 C78,12,53,22,31,21 C10,31,-18,29,-34,20 C-59,23,-84,11,-82,-14 Z"
+              ></path>
+              <path
+                class="ice-floe-shape"
+                d="M-82,-14 C-72,-31,-45,-38,-22,-34 C-4,-45,24,-40,37,-29 C61,-31,82,-17,80,-3 C78,12,53,22,31,21 C10,31,-18,29,-34,20 C-59,23,-84,11,-82,-14 Z"
+              ></path>
+              <path class="ice-highlight" d="M-57,-24 C-40,-34,-20,-28,-7,-34 C10,-39,27,-34,39,-26"></path>
+              <ellipse class="bear-shadow" cx="0" cy="-17" rx="13" ry="4"></ellipse>
+              <image
+                id="polar-bear"
+                class="polar-bear"
+                href="./assets/polar-bear.png"
+                x="-48"
+                y="-66"
+                width="96"
+                height="64"
+                preserveAspectRatio="xMidYMax meet"
+                aria-hidden="true"
+              ></image>
+            </g>
+          </svg>
+          <figcaption>
+            <strong id="floe-live" aria-live="polite">SSP5-8.5, 2100: +6.51 °C</strong>
+            <span class="bear-intro">
+              <b>Meet our polar bear guide!</b> Follow along as it travels through the timeline and the selected climate pathway changes.
+            </span>
+            <span>Illustrative only, not measured ice data. Floe size shrinks as the selected scenario's anomaly grows.</span>
+          </figcaption>
+        </figure>
+      </div>
       <div id="tooltip" class="tooltip" hidden></div>
       <p class="chart-caption" id="annotation-caption"></p>
+      <p class="photo-finish" id="photo-finish" aria-live="polite" hidden></p>
 
       <div class="support-grid">
         <div>
-          <h3>End-of-century warming (2081–2100)</h3>
+          <h3 id="window-chart-title">20-year mean warming (2081–2100)</h3>
           <div id="end-century-chart" class="mini-chart"></div>
         </div>
         <div>
@@ -147,7 +274,8 @@
         Global series are latitude-weighted with the cosine of latitude. Anomalies subtract the
         CanESM5 historical mean over <strong>1995–2014</strong>. Future lines cover 2015–2100 for
         SSP1-2.6, SSP2-4.5, and SSP5-8.5; the historical line shows 1850–2014 for context.
-        End-century summary bars average 2081–2100. Missing years are dropped rather than filled.
+        The summary bars average a 20-year window centered on the selected year and clamp that
+        window to the available 2015–2100 projections. Missing years are dropped rather than filled.
         The multi-model strip uses each model’s own 1995–2014 baseline for end-century global
         anomalies. Limitation: the interactive time series is one model (CanESM5), which runs warm
         relative to the small multi-model set shown below.
@@ -185,6 +313,6 @@
     </footer>
   </div>
 
-  <script src="./js/app.js?v=4"></script>
+  <script src="./js/app.js?v=11"></script>
 </body>
 </html>
