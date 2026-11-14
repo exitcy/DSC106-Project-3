@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# Large local caches / checkpoint artifacts (not needed for the D3 site)
+data/canesm5_tas_annual.nc
+data/ne_110m_coastline.geojson
+outputs/
+*.png
+
+# Local Python exploration scripts not required for the Pages site
+main.py
+interactive.py
+checkpoint_notes.md
+requirements.txt

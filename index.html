@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How Will Global Temperatures Change by 2100?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <p class="eyebrow">DSC 106 · CMIP6 Climate Projections</p>
+      <h1>How Will Global Temperatures Change by 2100?</h1>
+      <p class="lede">
+        Explore CanESM5 projections under three emissions pathways. Drag toward 2100 to watch
+        low- and high-emissions futures pull apart.
+      </p>
+    </header>
+
+    <section class="viz-panel" aria-label="Interactive temperature projection chart">
+      <div class="viz-header">
+        <div>
+          <h2>Global temperature anomaly over time</h2>
+          <p class="chart-subtitle" id="chart-subtitle">
+            Latitude-weighted annual means relative to the 1995–2014 CanESM5 historical baseline (°C).
+          </p>
+        </div>
+        <div class="year-badge" aria-live="polite">
+          <span class="year-label">Selected year</span>
+          <strong id="year-display">2100</strong>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-block">
+          <label for="year-slider">Time slider</label>
+          <p class="hint">Drag the slider toward 2100 to see how projections change.</p>
+          <input
+            id="year-slider"
+            type="range"
+            min="2015"
+            max="2100"
+            value="2100"
+            step="1"
+            aria-valuemin="2015"
+            aria-valuemax="2100"
+            aria-valuenow="2100"
+          />
+        </div>
+
+        <div class="control-block">
+          <span class="control-title" id="scenario-label">Focus scenario</span>
+          <p class="hint">Emphasize one pathway while keeping the others for context.</p>
+          <div class="scenario-toggle" role="group" aria-labelledby="scenario-label">
+            <button type="button" class="scenario-btn" data-scenario="SSP1-2.6">SSP1-2.6 · Low</button>
+            <button type="button" class="scenario-btn" data-scenario="SSP2-4.5">SSP2-4.5 · Medium</button>
+            <button type="button" class="scenario-btn is-active" data-scenario="SSP5-8.5">SSP5-8.5 · High</button>
+            <button type="button" class="scenario-btn" data-scenario="all">Show all</button>
+          </div>
+          <p class="scenario-plain" id="scenario-plain"></p>
+        </div>
+
+        <div class="control-block compare-block">
+          <span class="control-title">Scenario comparison at selected year</span>
+          <p class="hint">Compare two pathways to reveal how much the emissions choice matters.</p>
+          <div class="compare-row">
+            <label>
+              A
+              <select id="compare-a" aria-label="Comparison scenario A"></select>
+            </label>
+            <label>
+              B
+              <select id="compare-b" aria-label="Comparison scenario B"></select>
+            </label>
+          </div>
+          <p class="compare-readout" id="compare-readout" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div id="chart" class="chart" role="img" aria-label="Line chart of global temperature anomalies by scenario"></div>
+      <div id="tooltip" class="tooltip" hidden></div>
+      <p class="chart-caption" id="annotation-caption"></p>
+
+      <div class="support-grid">
+        <div>
+          <h3>End-of-century warming (2081–2100)</h3>
+          <div id="end-century-chart" class="mini-chart"></div>
+        </div>
+        <div>
+          <h3>Same question, four models</h3>
+          <p class="hint">End-century global anomalies; each model uses its own 1995–2014 baseline.</p>
+          <div id="model-chart" class="mini-chart"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About This Visualization</h2>
+
+      <h3>Motivation</h3>
+      <p>
+        The central question is how global near-surface temperatures change by 2100 under different
+        greenhouse-gas pathways. That question matters because the same climate model can produce
+        sharply different futures depending on emissions choices, and those differences are hard to
+        judge from a single static number. CMIP6 is appropriate here: it provides publicly archived,
+        scenario-based simulations of near-surface air temperature (<code>tas</code>) that can be
+        compared on a common baseline.
+      </p>
+
+      <h3>Visual encoding decisions</h3>
+      <p>
+        Position along a shared year axis and a shared temperature-anomaly axis carries the
+        quantitative comparison. Line marks keep the temporal trajectory readable. Scenario identity
+        uses a blue–amber–red palette (low to high emissions) so pathway differences stay
+        distinguishable without inventing a second quantitative channel. A horizontal baseline at
+        0&nbsp;°C anchors anomalies to the 1995–2014 reference. Alternatives considered included a
+        dense global grid map (strong for geography, weaker for precise year-to-year comparison) and
+        end-century bars alone (clear ranking, but they hide when pathways diverge). The slider,
+        focus control, and paired comparison are there to surface timing and magnitude of divergence
+        that a static multi-line chart only hints at.
+      </p>
+
+      <h3>Data transformations</h3>
+      <p>
+        Source: CMIP6 CanESM5 member <code>r1i1p1f1</code>, monthly <code>tas</code> from the public
+        Google Cloud Zarr archive, reduced to annual means and converted from Kelvin to Celsius.
+        Global series are latitude-weighted with the cosine of latitude. Anomalies subtract the
+        CanESM5 historical mean over <strong>1995–2014</strong>. Future lines cover 2015–2100 for
+        SSP1-2.6, SSP2-4.5, and SSP5-8.5; the historical line shows 1850–2014 for context.
+        End-century summary bars average 2081–2100. Missing years are dropped rather than filled.
+        The multi-model strip uses each model’s own 1995–2014 baseline for end-century global
+        anomalies. Limitation: the interactive time series is one model (CanESM5), which runs warm
+        relative to the small multi-model set shown below.
+      </p>
+
+      <h3>Development process</h3>
+      <ul>
+        <li><strong>Team members &amp; contributions:</strong> [Add names and who built what]</li>
+        <li><strong>Total development time:</strong> [Add people-hours]</li>
+        <li><strong>Most time-consuming challenges:</strong> [Add challenges]</li>
+        <li><strong>Division of responsibilities:</strong> [Add how work was split]</li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>
+        Data: CMIP6 via Google Cloud. Visualization: D3.js only. Baseline: 1995–2014 CanESM5 historical mean.
+      </p>
+    </footer>
+  </div>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

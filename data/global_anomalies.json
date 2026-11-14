@@ -1,0 +1,2540 @@
+[
+  {
+    "year": 1850,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.134
+  },
+  {
+    "year": 1851,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.389
+  },
+  {
+    "year": 1852,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.318
+  },
+  {
+    "year": 1853,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.164
+  },
+  {
+    "year": 1854,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.302
+  },
+  {
+    "year": 1855,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.353
+  },
+  {
+    "year": 1856,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.303
+  },
+  {
+    "year": 1857,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.311
+  },
+  {
+    "year": 1858,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.334
+  },
+  {
+    "year": 1859,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.207
+  },
+  {
+    "year": 1860,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.244
+  },
+  {
+    "year": 1861,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.28
+  },
+  {
+    "year": 1862,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.431
+  },
+  {
+    "year": 1863,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.291
+  },
+  {
+    "year": 1864,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.305
+  },
+  {
+    "year": 1865,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.428
+  },
+  {
+    "year": 1866,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.189
+  },
+  {
+    "year": 1867,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.044
+  },
+  {
+    "year": 1868,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.193
+  },
+  {
+    "year": 1869,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.231
+  },
+  {
+    "year": 1870,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.175
+  },
+  {
+    "year": 1871,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.25
+  },
+  {
+    "year": 1872,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.27
+  },
+  {
+    "year": 1873,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.225
+  },
+  {
+    "year": 1874,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.301
+  },
+  {
+    "year": 1875,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.177
+  },
+  {
+    "year": 1876,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.113
+  },
+  {
+    "year": 1877,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.161
+  },
+  {
+    "year": 1878,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.128
+  },
+  {
+    "year": 1879,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.163
+  },
+  {
+    "year": 1880,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.097
+  },
+  {
+    "year": 1881,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.111
+  },
+  {
+    "year": 1882,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.218
+  },
+  {
+    "year": 1883,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.056
+  },
+  {
+    "year": 1884,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.454
+  },
+  {
+    "year": 1885,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.368
+  },
+  {
+    "year": 1886,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.473
+  },
+  {
+    "year": 1887,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.326
+  },
+  {
+    "year": 1888,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.107
+  },
+  {
+    "year": 1889,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.121
+  },
+  {
+    "year": 1890,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.2
+  },
+  {
+    "year": 1891,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.385
+  },
+  {
+    "year": 1892,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.185
+  },
+  {
+    "year": 1893,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.271
+  },
+  {
+    "year": 1894,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.186
+  },
+  {
+    "year": 1895,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.046
+  },
+  {
+    "year": 1896,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.13
+  },
+  {
+    "year": 1897,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.076
+  },
+  {
+    "year": 1898,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.17
+  },
+  {
+    "year": 1899,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.106
+  },
+  {
+    "year": 1900,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.079
+  },
+  {
+    "year": 1901,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.127
+  },
+  {
+    "year": 1902,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.122
+  },
+  {
+    "year": 1903,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.267
+  },
+  {
+    "year": 1904,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.334
+  },
+  {
+    "year": 1905,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.377
+  },
+  {
+    "year": 1906,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.277
+  },
+  {
+    "year": 1907,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.207
+  },
+  {
+    "year": 1908,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.17
+  },
+  {
+    "year": 1909,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.131
+  },
+  {
+    "year": 1910,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.014
+  },
+  {
+    "year": 1911,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.02
+  },
+  {
+    "year": 1912,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.092
+  },
+  {
+    "year": 1913,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.354
+  },
+  {
+    "year": 1914,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.432
+  },
+  {
+    "year": 1915,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.286
+  },
+  {
+    "year": 1916,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.18
+  },
+  {
+    "year": 1917,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.063
+  },
+  {
+    "year": 1918,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.074
+  },
+  {
+    "year": 1919,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.089
+  },
+  {
+    "year": 1920,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.157
+  },
+  {
+    "year": 1921,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.129
+  },
+  {
+    "year": 1922,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.205
+  },
+  {
+    "year": 1923,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.126
+  },
+  {
+    "year": 1924,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.925
+  },
+  {
+    "year": 1925,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.879
+  },
+  {
+    "year": 1926,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.073
+  },
+  {
+    "year": 1927,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.122
+  },
+  {
+    "year": 1928,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.107
+  },
+  {
+    "year": 1929,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.046
+  },
+  {
+    "year": 1930,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.028
+  },
+  {
+    "year": 1931,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.09
+  },
+  {
+    "year": 1932,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.142
+  },
+  {
+    "year": 1933,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.074
+  },
+  {
+    "year": 1934,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.061
+  },
+  {
+    "year": 1935,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.092
+  },
+  {
+    "year": 1936,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.134
+  },
+  {
+    "year": 1937,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.03
+  },
+  {
+    "year": 1938,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.97
+  },
+  {
+    "year": 1939,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.992
+  },
+  {
+    "year": 1940,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.864
+  },
+  {
+    "year": 1941,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.851
+  },
+  {
+    "year": 1942,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.082
+  },
+  {
+    "year": 1943,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.997
+  },
+  {
+    "year": 1944,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.946
+  },
+  {
+    "year": 1945,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.004
+  },
+  {
+    "year": 1946,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.929
+  },
+  {
+    "year": 1947,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.977
+  },
+  {
+    "year": 1948,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.841
+  },
+  {
+    "year": 1949,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.72
+  },
+  {
+    "year": 1950,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.783
+  },
+  {
+    "year": 1951,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.878
+  },
+  {
+    "year": 1952,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.894
+  },
+  {
+    "year": 1953,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.083
+  },
+  {
+    "year": 1954,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.083
+  },
+  {
+    "year": 1955,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.031
+  },
+  {
+    "year": 1956,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.051
+  },
+  {
+    "year": 1957,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.043
+  },
+  {
+    "year": 1958,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.002
+  },
+  {
+    "year": 1959,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.873
+  },
+  {
+    "year": 1960,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.815
+  },
+  {
+    "year": 1961,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.696
+  },
+  {
+    "year": 1962,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.966
+  },
+  {
+    "year": 1963,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.168
+  },
+  {
+    "year": 1964,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.204
+  },
+  {
+    "year": 1965,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.942
+  },
+  {
+    "year": 1966,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.877
+  },
+  {
+    "year": 1967,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.032
+  },
+  {
+    "year": 1968,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.966
+  },
+  {
+    "year": 1969,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.995
+  },
+  {
+    "year": 1970,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.088
+  },
+  {
+    "year": 1971,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.111
+  },
+  {
+    "year": 1972,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -1.09
+  },
+  {
+    "year": 1973,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.854
+  },
+  {
+    "year": 1974,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.725
+  },
+  {
+    "year": 1975,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.773
+  },
+  {
+    "year": 1976,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.833
+  },
+  {
+    "year": 1977,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.653
+  },
+  {
+    "year": 1978,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.595
+  },
+  {
+    "year": 1979,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.869
+  },
+  {
+    "year": 1980,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.772
+  },
+  {
+    "year": 1981,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.707
+  },
+  {
+    "year": 1982,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.539
+  },
+  {
+    "year": 1983,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.628
+  },
+  {
+    "year": 1984,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.691
+  },
+  {
+    "year": 1985,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.672
+  },
+  {
+    "year": 1986,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.656
+  },
+  {
+    "year": 1987,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.478
+  },
+  {
+    "year": 1988,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.471
+  },
+  {
+    "year": 1989,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.557
+  },
+  {
+    "year": 1990,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.445
+  },
+  {
+    "year": 1991,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.416
+  },
+  {
+    "year": 1992,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.642
+  },
+  {
+    "year": 1993,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.779
+  },
+  {
+    "year": 1994,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.541
+  },
+  {
+    "year": 1995,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.438
+  },
+  {
+    "year": 1996,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.346
+  },
+  {
+    "year": 1997,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.251
+  },
+  {
+    "year": 1998,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.155
+  },
+  {
+    "year": 1999,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.086
+  },
+  {
+    "year": 2000,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.083
+  },
+  {
+    "year": 2001,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.024
+  },
+  {
+    "year": 2002,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.03
+  },
+  {
+    "year": 2003,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.002
+  },
+  {
+    "year": 2004,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.055
+  },
+  {
+    "year": 2005,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.029
+  },
+  {
+    "year": 2006,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.195
+  },
+  {
+    "year": 2007,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.147
+  },
+  {
+    "year": 2008,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": -0.017
+  },
+  {
+    "year": 2009,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": 0.154
+  },
+  {
+    "year": 2010,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": 0.451
+  },
+  {
+    "year": 2011,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": 0.303
+  },
+  {
+    "year": 2012,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": 0.149
+  },
+  {
+    "year": 2013,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": 0.368
+  },
+  {
+    "year": 2014,
+    "experiment": "historical",
+    "scenario": "Historical",
+    "anomaly_c": 0.435
+  },
+  {
+    "year": 2015,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.316
+  },
+  {
+    "year": 2016,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.344
+  },
+  {
+    "year": 2017,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.564
+  },
+  {
+    "year": 2018,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.474
+  },
+  {
+    "year": 2019,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.406
+  },
+  {
+    "year": 2020,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.393
+  },
+  {
+    "year": 2021,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.403
+  },
+  {
+    "year": 2022,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.474
+  },
+  {
+    "year": 2023,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.815
+  },
+  {
+    "year": 2024,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.897
+  },
+  {
+    "year": 2025,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.73
+  },
+  {
+    "year": 2026,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.841
+  },
+  {
+    "year": 2027,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.782
+  },
+  {
+    "year": 2028,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.864
+  },
+  {
+    "year": 2029,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 0.808
+  },
+  {
+    "year": 2030,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.015
+  },
+  {
+    "year": 2031,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.051
+  },
+  {
+    "year": 2032,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.115
+  },
+  {
+    "year": 2033,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.143
+  },
+  {
+    "year": 2034,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.116
+  },
+  {
+    "year": 2035,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.162
+  },
+  {
+    "year": 2036,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.241
+  },
+  {
+    "year": 2037,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.168
+  },
+  {
+    "year": 2038,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.276
+  },
+  {
+    "year": 2039,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.33
+  },
+  {
+    "year": 2040,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.281
+  },
+  {
+    "year": 2041,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.281
+  },
+  {
+    "year": 2042,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.375
+  },
+  {
+    "year": 2043,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.395
+  },
+  {
+    "year": 2044,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.269
+  },
+  {
+    "year": 2045,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.352
+  },
+  {
+    "year": 2046,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.587
+  },
+  {
+    "year": 2047,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.477
+  },
+  {
+    "year": 2048,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.305
+  },
+  {
+    "year": 2049,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.465
+  },
+  {
+    "year": 2050,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.398
+  },
+  {
+    "year": 2051,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.23
+  },
+  {
+    "year": 2052,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.479
+  },
+  {
+    "year": 2053,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.654
+  },
+  {
+    "year": 2054,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.579
+  },
+  {
+    "year": 2055,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.554
+  },
+  {
+    "year": 2056,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.715
+  },
+  {
+    "year": 2057,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.741
+  },
+  {
+    "year": 2058,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.571
+  },
+  {
+    "year": 2059,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.615
+  },
+  {
+    "year": 2060,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.74
+  },
+  {
+    "year": 2061,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.642
+  },
+  {
+    "year": 2062,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.714
+  },
+  {
+    "year": 2063,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.766
+  },
+  {
+    "year": 2064,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.706
+  },
+  {
+    "year": 2065,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.583
+  },
+  {
+    "year": 2066,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.655
+  },
+  {
+    "year": 2067,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.603
+  },
+  {
+    "year": 2068,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.582
+  },
+  {
+    "year": 2069,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.746
+  },
+  {
+    "year": 2070,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.764
+  },
+  {
+    "year": 2071,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.673
+  },
+  {
+    "year": 2072,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.669
+  },
+  {
+    "year": 2073,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.725
+  },
+  {
+    "year": 2074,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.776
+  },
+  {
+    "year": 2075,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.689
+  },
+  {
+    "year": 2076,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.622
+  },
+  {
+    "year": 2077,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.661
+  },
+  {
+    "year": 2078,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.71
+  },
+  {
+    "year": 2079,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.709
+  },
+  {
+    "year": 2080,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.685
+  },
+  {
+    "year": 2081,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.616
+  },
+  {
+    "year": 2082,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.704
+  },
+  {
+    "year": 2083,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.583
+  },
+  {
+    "year": 2084,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.654
+  },
+  {
+    "year": 2085,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.902
+  },
+  {
+    "year": 2086,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.924
+  },
+  {
+    "year": 2087,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.576
+  },
+  {
+    "year": 2088,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.408
+  },
+  {
+    "year": 2089,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.536
+  },
+  {
+    "year": 2090,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.592
+  },
+  {
+    "year": 2091,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.584
+  },
+  {
+    "year": 2092,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.428
+  },
+  {
+    "year": 2093,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.57
+  },
+  {
+    "year": 2094,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.553
+  },
+  {
+    "year": 2095,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.448
+  },
+  {
+    "year": 2096,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.613
+  },
+  {
+    "year": 2097,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.56
+  },
+  {
+    "year": 2098,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.439
+  },
+  {
+    "year": 2099,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.614
+  },
+  {
+    "year": 2100,
+    "experiment": "ssp126",
+    "scenario": "SSP1-2.6",
+    "anomaly_c": 1.743
+  },
+  {
+    "year": 2015,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.313
+  },
+  {
+    "year": 2016,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.344
+  },
+  {
+    "year": 2017,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.499
+  },
+  {
+    "year": 2018,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.401
+  },
+  {
+    "year": 2019,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.407
+  },
+  {
+    "year": 2020,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.728
+  },
+  {
+    "year": 2021,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.626
+  },
+  {
+    "year": 2022,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.64
+  },
+  {
+    "year": 2023,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.734
+  },
+  {
+    "year": 2024,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.819
+  },
+  {
+    "year": 2025,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.055
+  },
+  {
+    "year": 2026,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.196
+  },
+  {
+    "year": 2027,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.113
+  },
+  {
+    "year": 2028,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.061
+  },
+  {
+    "year": 2029,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.897
+  },
+  {
+    "year": 2030,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 0.919
+  },
+  {
+    "year": 2031,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.054
+  },
+  {
+    "year": 2032,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.019
+  },
+  {
+    "year": 2033,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.135
+  },
+  {
+    "year": 2034,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.341
+  },
+  {
+    "year": 2035,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.331
+  },
+  {
+    "year": 2036,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.189
+  },
+  {
+    "year": 2037,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.26
+  },
+  {
+    "year": 2038,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.286
+  },
+  {
+    "year": 2039,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.32
+  },
+  {
+    "year": 2040,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.392
+  },
+  {
+    "year": 2041,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.475
+  },
+  {
+    "year": 2042,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.675
+  },
+  {
+    "year": 2043,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.465
+  },
+  {
+    "year": 2044,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.644
+  },
+  {
+    "year": 2045,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.589
+  },
+  {
+    "year": 2046,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.559
+  },
+  {
+    "year": 2047,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.551
+  },
+  {
+    "year": 2048,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.761
+  },
+  {
+    "year": 2049,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.628
+  },
+  {
+    "year": 2050,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.663
+  },
+  {
+    "year": 2051,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.895
+  },
+  {
+    "year": 2052,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.007
+  },
+  {
+    "year": 2053,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.786
+  },
+  {
+    "year": 2054,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.694
+  },
+  {
+    "year": 2055,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 1.923
+  },
+  {
+    "year": 2056,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.185
+  },
+  {
+    "year": 2057,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.126
+  },
+  {
+    "year": 2058,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.153
+  },
+  {
+    "year": 2059,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.336
+  },
+  {
+    "year": 2060,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.354
+  },
+  {
+    "year": 2061,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.24
+  },
+  {
+    "year": 2062,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.168
+  },
+  {
+    "year": 2063,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.301
+  },
+  {
+    "year": 2064,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.183
+  },
+  {
+    "year": 2065,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.208
+  },
+  {
+    "year": 2066,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.379
+  },
+  {
+    "year": 2067,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.314
+  },
+  {
+    "year": 2068,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.253
+  },
+  {
+    "year": 2069,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.458
+  },
+  {
+    "year": 2070,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.441
+  },
+  {
+    "year": 2071,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.5
+  },
+  {
+    "year": 2072,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.555
+  },
+  {
+    "year": 2073,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.598
+  },
+  {
+    "year": 2074,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.636
+  },
+  {
+    "year": 2075,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.517
+  },
+  {
+    "year": 2076,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.609
+  },
+  {
+    "year": 2077,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.633
+  },
+  {
+    "year": 2078,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.661
+  },
+  {
+    "year": 2079,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.696
+  },
+  {
+    "year": 2080,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.484
+  },
+  {
+    "year": 2081,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.57
+  },
+  {
+    "year": 2082,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.77
+  },
+  {
+    "year": 2083,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.722
+  },
+  {
+    "year": 2084,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.798
+  },
+  {
+    "year": 2085,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.966
+  },
+  {
+    "year": 2086,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.925
+  },
+  {
+    "year": 2087,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.041
+  },
+  {
+    "year": 2088,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.01
+  },
+  {
+    "year": 2089,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.88
+  },
+  {
+    "year": 2090,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.875
+  },
+  {
+    "year": 2091,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.962
+  },
+  {
+    "year": 2092,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.986
+  },
+  {
+    "year": 2093,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.792
+  },
+  {
+    "year": 2094,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.019
+  },
+  {
+    "year": 2095,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.208
+  },
+  {
+    "year": 2096,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.966
+  },
+  {
+    "year": 2097,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 2.978
+  },
+  {
+    "year": 2098,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.075
+  },
+  {
+    "year": 2099,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.086
+  },
+  {
+    "year": 2100,
+    "experiment": "ssp245",
+    "scenario": "SSP2-4.5",
+    "anomaly_c": 3.117
+  },
+  {
+    "year": 2015,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.398
+  },
+  {
+    "year": 2016,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.444
+  },
+  {
+    "year": 2017,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.654
+  },
+  {
+    "year": 2018,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.62
+  },
+  {
+    "year": 2019,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.605
+  },
+  {
+    "year": 2020,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.676
+  },
+  {
+    "year": 2021,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.61
+  },
+  {
+    "year": 2022,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.654
+  },
+  {
+    "year": 2023,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.907
+  },
+  {
+    "year": 2024,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.77
+  },
+  {
+    "year": 2025,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.729
+  },
+  {
+    "year": 2026,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.957
+  },
+  {
+    "year": 2027,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 0.902
+  },
+  {
+    "year": 2028,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.004
+  },
+  {
+    "year": 2029,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.132
+  },
+  {
+    "year": 2030,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.077
+  },
+  {
+    "year": 2031,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.302
+  },
+  {
+    "year": 2032,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.325
+  },
+  {
+    "year": 2033,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.474
+  },
+  {
+    "year": 2034,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.332
+  },
+  {
+    "year": 2035,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.359
+  },
+  {
+    "year": 2036,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.508
+  },
+  {
+    "year": 2037,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.521
+  },
+  {
+    "year": 2038,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.411
+  },
+  {
+    "year": 2039,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.625
+  },
+  {
+    "year": 2040,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.786
+  },
+  {
+    "year": 2041,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.809
+  },
+  {
+    "year": 2042,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 1.835
+  },
+  {
+    "year": 2043,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.048
+  },
+  {
+    "year": 2044,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.162
+  },
+  {
+    "year": 2045,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.028
+  },
+  {
+    "year": 2046,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.145
+  },
+  {
+    "year": 2047,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.417
+  },
+  {
+    "year": 2048,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.215
+  },
+  {
+    "year": 2049,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.298
+  },
+  {
+    "year": 2050,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.402
+  },
+  {
+    "year": 2051,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.455
+  },
+  {
+    "year": 2052,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.579
+  },
+  {
+    "year": 2053,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.594
+  },
+  {
+    "year": 2054,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.663
+  },
+  {
+    "year": 2055,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 2.748
+  },
+  {
+    "year": 2056,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.044
+  },
+  {
+    "year": 2057,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.077
+  },
+  {
+    "year": 2058,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.028
+  },
+  {
+    "year": 2059,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.215
+  },
+  {
+    "year": 2060,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.255
+  },
+  {
+    "year": 2061,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.316
+  },
+  {
+    "year": 2062,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.354
+  },
+  {
+    "year": 2063,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.29
+  },
+  {
+    "year": 2064,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.515
+  },
+  {
+    "year": 2065,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.523
+  },
+  {
+    "year": 2066,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.728
+  },
+  {
+    "year": 2067,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.875
+  },
+  {
+    "year": 2068,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.704
+  },
+  {
+    "year": 2069,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 3.892
+  },
+  {
+    "year": 2070,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.2
+  },
+  {
+    "year": 2071,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.244
+  },
+  {
+    "year": 2072,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.043
+  },
+  {
+    "year": 2073,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.335
+  },
+  {
+    "year": 2074,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.447
+  },
+  {
+    "year": 2075,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.446
+  },
+  {
+    "year": 2076,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.468
+  },
+  {
+    "year": 2077,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.638
+  },
+  {
+    "year": 2078,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.719
+  },
+  {
+    "year": 2079,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.609
+  },
+  {
+    "year": 2080,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 4.863
+  },
+  {
+    "year": 2081,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.159
+  },
+  {
+    "year": 2082,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.022
+  },
+  {
+    "year": 2083,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.033
+  },
+  {
+    "year": 2084,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.209
+  },
+  {
+    "year": 2085,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.336
+  },
+  {
+    "year": 2086,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.18
+  },
+  {
+    "year": 2087,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.296
+  },
+  {
+    "year": 2088,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.568
+  },
+  {
+    "year": 2089,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.604
+  },
+  {
+    "year": 2090,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.637
+  },
+  {
+    "year": 2091,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.942
+  },
+  {
+    "year": 2092,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.853
+  },
+  {
+    "year": 2093,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 5.958
+  },
+  {
+    "year": 2094,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.039
+  },
+  {
+    "year": 2095,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.131
+  },
+  {
+    "year": 2096,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.337
+  },
+  {
+    "year": 2097,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.242
+  },
+  {
+    "year": 2098,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.239
+  },
+  {
+    "year": 2099,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.501
+  },
+  {
+    "year": 2100,
+    "experiment": "ssp585",
+    "scenario": "SSP5-8.5",
+    "anomaly_c": 6.512
+  }
+]

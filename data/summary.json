@@ -1,0 +1,40 @@
+{
+  "source_id": "CanESM5",
+  "member_id": "r1i1p1f1",
+  "variable_id": "tas",
+  "units": "degC",
+  "baseline": "1995-2014",
+  "baseline_note": "Global anomalies are latitude-weighted (cosine of latitude) annual means minus the CanESM5 historical mean over 1995\u20132014.",
+  "future_mean_period": "2081-2100",
+  "scenario_plain": {
+    "ssp126": "Low emissions \u2014 strong mitigation",
+    "ssp245": "Medium emissions \u2014 middle of the road",
+    "ssp585": "High emissions \u2014 fossil-fuel intensive"
+  },
+  "end_century_means_c": {
+    "SSP1-2.6": 1.6,
+    "SSP2-4.5": 2.94,
+    "SSP5-8.5": 5.74
+  },
+  "year_2100_c": {
+    "SSP1-2.6": 1.74,
+    "SSP2-4.5": 3.12,
+    "SSP5-8.5": 6.51
+  },
+  "gap_2100_high_minus_low_c": 4.77,
+  "divergence": {
+    "year": 2050,
+    "threshold_c": 1.0,
+    "gap_c": 1.004,
+    "low_scenario": "SSP1-2.6",
+    "high_scenario": "SSP5-8.5"
+  },
+  "slider_years": {
+    "min": 2015,
+    "max": 2100
+  },
+  "compare_default": [
+    "SSP1-2.6",
+    "SSP5-8.5"
+  ]
+}
